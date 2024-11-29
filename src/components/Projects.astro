@@ -6,32 +6,14 @@
 
 const testimonials = [
   {
-    name: "Alice Smith",
-    testimonial: "Your work is truly outstanding!",
-    src: "/",
+    name: "TeecBack",
+    testimonial: "Plataforma para recopilar retroalimentación de egresados universitarios.",
+    src: "https://teecback.vercel.app/",
     alt: "Logo",
   },
   {
-    name: "Michael Johnson",
-    testimonial: "Exceptional quality and attention to detail.",
-    src: "/",
-    alt: "Logo",
-  },
-  {
-    name: "Emily Davis",
-    testimonial: "Incredible results!",
-    src: "/",
-    alt: "Logo",
-  },
-  {
-    name: "Chris Lee",
-    testimonial: "Your creativity and skill are unmatched.",
-    src: "/",
-    alt: "Logo",
-  },
-  {
-    name: "Sophia Brown",
-    testimonial: "Impressive work and great service.",
+    name: "TecJobs",
+    testimonial: "Plataforma web enfocada en ayudar a los alumnos a encontrar trabajo y donde hacer servicio social y residencia profesional.",
     src: "/",
     alt: "Logo",
   },
@@ -46,13 +28,13 @@ import Image from "astro/components/Image.astro";
   <h2
     class="z-10 w-full max-w-xl sm:text-center text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground"
   >
-    Every project is a new challenge to overcome.
+    Cada proyecto es un nuevo reto por superar.
   </h2>
-  <p
+  <!-- <p
     class="w-full max-w-xl bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground sm:text-center text-normal sm:text-lg md:text-xl font-light tracking-tighter text-balance"
   >
-    Design, Code, Learn, Repeat.
-  </p>
+    Design, Code, Learn, Repeat. SUBTITULO
+  </p> -->
   <div class="z-10 w-full grid grid-cols-1 md:grid-cols-5 grid-rows-6 gap-2">
     <article
       class="overflow-hidden relative bg-dark-card col-span-1 md:col-span-3 md:row-span-2 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
@@ -89,7 +71,7 @@ import Image from "astro/components/Image.astro";
         <span
           class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
         >
-          Building in public
+          colaboración
         </span>
       </div>
       <div
@@ -98,7 +80,7 @@ import Image from "astro/components/Image.astro";
         <span
           class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
         >
-          Web Development
+          adaptabilidad
         </span>
       </div>
       <div
@@ -107,7 +89,7 @@ import Image from "astro/components/Image.astro";
         <span
           class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
         >
-          Design
+          Trabajo en equipo
         </span>
       </div>
       <div
@@ -116,7 +98,7 @@ import Image from "astro/components/Image.astro";
         <span
           class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
         >
-          Open Source
+          Autodidacta
         </span>
       </div>
     </article>
@@ -144,9 +126,16 @@ import Image from "astro/components/Image.astro";
                   <span class="w-7 h-7 rounded-full bg-gradient-to-r from-primary to-secondary" />
                   <h1 class="text-sm font-medium">{testimonial.name}</h1>
                 </div>
-                <p class="w-full text-left text-muted-foreground text-xs">
+                {/* <p class="w-full text-left text-muted-foreground text-xs">
                   {testimonial.testimonial}
-                </p>
+                </p> */}
+
+                <a href={testimonial.src}
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full text-left text-blue-800 text-xs"
+                >Ir al proyecto
+                </a>
               </article>
             ))
           }
@@ -165,7 +154,7 @@ import Image from "astro/components/Image.astro";
         <p
           class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
         >
-          Es una plataforma web para buscar empleo en el sector tecnológico, con un enfoque en la experiencia del usuario.
+          Es una plataforma web enfocada en ayudar a los alumnos a encontrar trabajo y donde hacer servicio social y residencia profesional.
         </p>
       </div>
       <div class="aspect-video">
