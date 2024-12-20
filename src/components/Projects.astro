@@ -12,11 +12,24 @@ const testimonials = [
     alt: "Logo",
   },
   {
-    name: "TecJobs",
-    testimonial: "Plataforma web enfocada en ayudar a los alumnos a encontrar trabajo y donde hacer servicio social y residencia profesional.",
-    src: "/",
+    name: "TecBox",
+    testimonial: "Bitácora que permite automatizar procesos de guardado de producto.",
+    src: "https://github.com/RasenBunkai/TecBox.git",
     alt: "Logo",
   },
+  {
+    name: "TecJobs",
+    testimonial: "Plataforma web enfocada en ayudar a los alumnos a encontrar trabajo y donde hacer servicio social y residencia profesional.",
+    src: "https://github.com/RasenBunkai/TecJobs.git",
+    alt: "Logo",
+  },
+  {
+    name: "Hyperton",
+    testimonial: "Mi primer proyecto con HTML y CSS vanilla",
+    src: "https://github.com/RasenBunkai/Proyecto-Hyperton.git",
+    alt: "Logo",
+  },
+
 ];
 
 import Image from "astro/components/Image.astro";
@@ -43,17 +56,17 @@ import Image from "astro/components/Image.astro";
         <h3
           class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
         >
-          Hyperton
+          TecBox
         </h3>
         <p
           class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
         >
-          Your project description here.
+          Es una bitácora que permite automatizar procesos de guardado de producto.
         </p>
       </div>
       <div class="aspect-video">
         <Image
-          src="/assets/mockup3.png"
+          src="/assets/TecBox.png"
           alt="Mockup Project"
           loading="lazy"
           width={1920}
