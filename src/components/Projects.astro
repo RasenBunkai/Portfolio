@@ -6,21 +6,24 @@
 
 const testimonials = [
   {
+    name: "SafePlace",
+    testimonial:
+      "Plataforma para descubrir y explorar las zonas más seguras de tu ciudad con información confiable y mapas interactivos.",
+    src: "https://github.com/RasenBunkai/Cancun-SafePlace.git",
+    alt: "Logo",
+  },
+  {
     name: "TeecBack",
-    testimonial: "Plataforma para recopilar retroalimentación de egresados universitarios.",
-    src: "https://teecback.vercel.app/",
+    testimonial:
+      "Plataforma para recopilar retroalimentación de egresados universitarios.",
+    src: "https://github.com/RasenBunkai/TeecBack.git",
     alt: "Logo",
   },
   {
     name: "TecBox",
-    testimonial: "Bitácora que permite automatizar procesos de guardado de producto.",
+    testimonial:
+      "Aplicación web diseñada para gestionar y organizar proyectos técnicos. Permite a los usuarios crear, editar y eliminar proyectos, así como asignar tareas y hacer seguimiento del progreso.",
     src: "https://github.com/RasenBunkai/TecBox.git",
-    alt: "Logo",
-  },
-  {
-    name: "TecJobs",
-    testimonial: "Plataforma web enfocada en ayudar a los alumnos a encontrar trabajo y donde hacer servicio social y residencia profesional.",
-    src: "https://github.com/RasenBunkai/TecJobs.git",
     alt: "Logo",
   },
   {
@@ -29,13 +32,20 @@ const testimonials = [
     src: "https://github.com/RasenBunkai/Proyecto-Hyperton.git",
     alt: "Logo",
   },
-
+  {
+    name: "Programacion en C++",
+    testimonial:
+      "En este repositorio almaceno la información adquirida en el lenguaje de programación C++.",
+    src: "https://github.com/RasenBunkai/Programacion-en-Cpp.git",
+    alt: "Logo",
+  },
 ];
 
 import Image from "astro/components/Image.astro";
 ---
 
-<section id = "Projects"
+<section
+  id="Projects"
   class="relative overflow-hidden bg-foreground w-full max-w-screen-2xl text-center flex flex-col justify-center items-center gap-10 px-4 py-24 sm:py-24 select-none"
 >
   <h2
@@ -43,11 +53,11 @@ import Image from "astro/components/Image.astro";
   >
     Cada proyecto es un nuevo reto por superar.
   </h2>
-  <!-- <p
+  <p
     class="w-full max-w-xl bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground sm:text-center text-normal sm:text-lg md:text-xl font-light tracking-tighter text-balance"
   >
-    Design, Code, Learn, Repeat. SUBTITULO
-  </p> -->
+    Siempre aprendiendo, siempre mejorando.
+  </p>
   <div class="z-10 w-full grid grid-cols-1 md:grid-cols-5 grid-rows-6 gap-2">
     <article
       class="overflow-hidden relative bg-dark-card col-span-1 md:col-span-3 md:row-span-2 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
@@ -61,7 +71,8 @@ import Image from "astro/components/Image.astro";
         <p
           class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
         >
-          Es una bitácora que permite automatizar procesos de guardado de producto.
+          Es una bitácora que permite automatizar procesos de guardado de
+          producto.
         </p>
       </div>
       <div class="aspect-video">
@@ -143,11 +154,13 @@ import Image from "astro/components/Image.astro";
                   {testimonial.testimonial}
                 </p> */}
 
-                <a href={testimonial.src}
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="w-full text-left text-blue-800 text-xs"
-                >Ir al proyecto
+                <a
+                  href={testimonial.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full text-left text-blue-800 text-xs"
+                >
+                  Ir al proyecto
                 </a>
               </article>
             ))
@@ -162,18 +175,19 @@ import Image from "astro/components/Image.astro";
         <h3
           class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
         >
-          TecJobs
+          SafePlace
         </h3>
         <p
           class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
         >
-          Es una plataforma web enfocada en ayudar a los alumnos a encontrar trabajo y donde hacer servicio social y residencia profesional.
+          Plataforma para descubrir y explorar las zonas más seguras de tu
+          ciudad con información confiable y mapas interactivos.
         </p>
       </div>
       <div class="aspect-video">
         <Image
-          src="/assets/TecJobs.png"
-          alt="TecJobs WebSite"
+          src="/assets/SafePlace.png"
+          alt="SafePlace WebSite"
           loading="lazy"
           width={1920}
           height={1080}
@@ -193,7 +207,8 @@ import Image from "astro/components/Image.astro";
         <p
           class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
         >
-          Es una plataforma web para recopilar retroalimentación de egresados universitarios, que ayuda a mejorar la experiencia educativa.
+          Es una plataforma web para recopilar retroalimentación de egresados
+          universitarios, que ayuda a mejorar la experiencia educativa.
         </p>
       </div>
       <div class="aspect-video">
