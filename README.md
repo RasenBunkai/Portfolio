@@ -8,7 +8,7 @@ This is a free portfolio starter template built with Astro and Tailwind CSS.
 
 ## Preview
 
-![Astro Portfolio Template by Gonzalo Chalé](public/assets/preview.png)
+![Astro Portfolio Template by Gonzalo Chalé](public/assets/PortFolio%20mockup.png)
 
 ## Deploy
 
