@@ -7,8 +7,12 @@ export default defineConfig({
     enabled: false,
   },
   i18n: {
-    locales: ["es", "en"],
     defaultLocale: "es",
+    locales: ["es", "en"],
+    routing:{
+      prefixDefaultLocale:true,
+      redirectToDefaultLocale:true
+    }
   },
   integrations: [tailwind()],
 });
