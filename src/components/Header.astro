@@ -3,17 +3,12 @@
  * https://www.radix-ui.com/icons
  */
 import TranslateBtn from "./TranslateBtn.astro";
-import { useTranslations } from "../i18n/utils";
-
-const lang = (document.documentElement.lang || "es") as "es" | "en";
-const t = useTranslations(lang);
 ---
 
 <header
-  class="bg-foreground w-full px-4 h-10 flex justify-center items-center gap-8 sticky top-0 z-50"
->
+  class="bg-foreground w-full px-4 h-10 flex justify-center items-center gap-8 sticky top-0 z-50">
   <a href="#Stack" class="group flex items-center gap-2 text-sm text-card">
-    {t("header.tecnologia")}
+    Mis tecnologías
     <svg
       width="15"
       height="15"
@@ -29,7 +24,7 @@ const t = useTranslations(lang);
     >
   </a>
   <a href="#Projects" class="group flex items-center gap-2 text-sm text-card">
-    {t("header.proyectos")}
+    Mis proyectos
     <svg
       width="15"
       height="15"
@@ -45,7 +40,7 @@ const t = useTranslations(lang);
     >
   </a>
   <a href="#About" class="group flex items-center gap-2 text-sm text-card">
-    {t("header.sobreMi")}
+    Sobre mi
     <svg
       width="15"
       height="15"
@@ -62,24 +57,3 @@ const t = useTranslations(lang);
   </a>
   <TranslateBtn />
 </header>
-
-<script>
-  import { useTranslations } from "../i18n/utils";
-
-  const lang = (document.documentElement.lang || "es") as "es" | "en";
-  const t = useTranslations(lang);
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (key) {
-      el.textContent = t(
-        key as
-          | "header.tecnologia"
-          | "header.proyectos"
-          | "header.sobreMi"
-          | "hero.titulo"
-          | "hero.descargar"
-      );
-    }
-  });
-</script>
