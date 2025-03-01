@@ -2,13 +2,13 @@
 /* Icon provided by Radix Icons
  * https://www.radix-ui.com/icons
  */
-import TranslateBtn from "./TranslateBtn.astro";
+// import TranslateBtn from "./TranslateBtn.astro";
 ---
 
 <header
   class="bg-foreground w-full px-4 h-10 flex justify-center items-center gap-8 sticky top-0 z-50">
-  <a href="#Stack" class="group flex items-center gap-2 text-sm text-card">
-    Mis tecnologías
+  <a href="#Stack" class="group flex items-center gap-2 text-sm text-card"
+    >Mis tecnologías
     <svg
       width="15"
       height="15"
@@ -24,7 +24,7 @@ import TranslateBtn from "./TranslateBtn.astro";
     >
   </a>
   <a href="#Projects" class="group flex items-center gap-2 text-sm text-card">
-    Mis proyectos
+    <span data-i18n-key="header.projects">Mis proyectos</span>
     <svg
       width="15"
       height="15"
@@ -40,7 +40,7 @@ import TranslateBtn from "./TranslateBtn.astro";
     >
   </a>
   <a href="#About" class="group flex items-center gap-2 text-sm text-card">
-    Sobre mi
+    <span data-i18n-key="header.about">Sobre mi</span>
     <svg
       width="15"
       height="15"
@@ -55,5 +55,5 @@ import TranslateBtn from "./TranslateBtn.astro";
         clip-rule="evenodd"></path></svg
     >
   </a>
-  <TranslateBtn />
+  <!-- <TranslateBtn /> -->
 </header>

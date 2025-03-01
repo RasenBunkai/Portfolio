@@ -1,3 +1,7 @@
+---
+// import {languajeList} from "../i18n/ui";
+---
+
 <button class="text-sm text-card" onclick="toggleLanguage()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -5,8 +9,7 @@
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke="currentColor"
-    class="size-6"
-  >
+    class="size-6">
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -16,17 +19,29 @@
 </button>
 
 <script>
-    declare global {
-        interface Window {
-            toggleLanguage: () => void;
-        }
-    }
-    export function toggleLanguage() {
-        const currentLang = document.documentElement.lang;
-        const newLang = currentLang === "en" ? "es" : "en";
-        document.documentElement.lang = newLang;
+  // import { t } from '../i18n/utils';
 
-        console.log("Language toggled");
+  declare global {
+    interface Window {
+      toggleLanguage: () => void;
     }
-    window.toggleLanguage = toggleLanguage;
+  }
+
+  export function toggleLanguage() {
+    const currentLang = document.documentElement.lang;
+    const newLang = currentLang === "en" ? "es" : "en";
+    document.documentElement.lang = newLang;
+
+    // Recargar el contenido traducido
+    document.querySelectorAll("[data-i18n-key]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-key");
+      if (key) {
+        // el.textContent = t(key);
+      }
+    });
+
+    console.log("Language toggled");
+  }
+
+  window.toggleLanguage = toggleLanguage;
 </script>
