@@ -39,6 +39,20 @@ const projects = [
     src: "https://github.com/RasenBunkai/Programacion-en-Cpp.git",
     alt: "Logo",
   },
+  {
+    name: "Demo-Landing-Streamer",
+    testimonial:
+      "Página web diseñada para centralizar la presencia online de streamers. Incluye enlaces a redes sociales y plataformas de stream, calendario de transmisiones, clips destacados, opciones de donación y sección de contacto, todo en un diseño responsivo y personalizado.",
+    src: "https://demo-landing-streamer.vercel.app/",
+    alt: "Logo",
+  },
+  {
+    name: "Demo-artist-folio",
+    testimonial:
+      "Diseño y desarrollo de un sitio web responsivo pensado para artistas visuales que desean mostrar su trabajo de forma profesional. Incluye galería de obras, tabla de precios para comisiones, formulario de contacto, y secciones personalizables como blog o proceso de trabajo.",
+    src: "https://github.com/RasenBunkai/Demo-artist-folio",
+    alt:"Logo"
+  },
 ];
 
 import Image from "astro/components/Image.astro";
@@ -46,95 +60,78 @@ import Image from "astro/components/Image.astro";
 
 <section
   id="Projects"
-  class="relative overflow-hidden bg-foreground w-full text-center flex flex-col justify-center items-center gap-10 px-4 py-24 sm:py-24 select-none"
->
+  class="relative overflow-hidden bg-foreground w-full text-center flex flex-col justify-center items-center gap-10 px-4 py-24 sm:py-24 select-none">
   <h2
-    class="z-10 w-full max-w-xl sm:text-center text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground"
-  >
+    class="z-10 w-full max-w-xl sm:text-center text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground">
     Mis proyectos
   </h2>
   <p
-    class="w-full max-w-xl bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground sm:text-center text-normal sm:text-lg md:text-xl font-light tracking-tighter text-balance"
-  >
+    class="w-full max-w-xl bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground sm:text-center text-normal sm:text-lg md:text-xl font-light tracking-tighter text-balance">
     Siempre aprendiendo, siempre mejorando.
   </p>
   <div class="z-10 w-full grid grid-cols-1 md:grid-cols-5 grid-rows-6 gap-2">
     <article
-      class="overflow-hidden relative bg-dark-card col-span-1 md:col-span-3 md:row-span-2 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
-    >
+      class="overflow-hidden relative bg-dark-card col-span-1 md:col-span-3 md:row-span-2 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3">
       <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
         <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
-        >
-          TecBox
+          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
+          Portafolio personal y comisiones
         </h3>
         <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
-        >
-          Es una bitácora que permite automatizar procesos de guardado de
-          producto.
+          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance">
+          Diseño y desarrollo de un sitio web responsivo pensado para artistas
+          visuales que desean mostrar su trabajo de forma profesional.
         </p>
       </div>
       <div class="aspect-video">
         <Image
-          src="/assets/TecBox.png"
+          src="/assets/ArtistFolio.png"
           alt="Mockup Project"
           loading="lazy"
           width={1920}
           height={1080}
+          draggable="false"
           class="object-contain w-full h-full rounded-md"
         />
       </div>
     </article>
     <article
-      class="overflow-hidden group bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 h-[300px] border border-dark-border rounded-[1rem] p-4 flex flex-col flex-1 gap-2 justify-center items-center"
-    >
+      class="overflow-hidden group bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 h-[300px] border border-dark-border rounded-[1rem] p-4 flex flex-col flex-1 gap-2 justify-center items-center">
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center rotate-12 group-hover:rotate-0 border transition-all duration-300 ease-in-out"
-      >
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center rotate-12 group-hover:rotate-0 border transition-all duration-300 ease-in-out">
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
-        >
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
           colaboración
         </span>
       </div>
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center -rotate-6 group-hover:rotate-0 border transition-all duration-300 ease-in-out"
-      >
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center -rotate-6 group-hover:rotate-0 border transition-all duration-300 ease-in-out">
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
-        >
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
           adaptabilidad
         </span>
       </div>
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border"
-      >
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border">
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
-        >
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
           Trabajo en equipo
         </span>
       </div>
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border rotate-12 group-hover:rotate-0 transition-all duration-300 ease-in-out"
-      >
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border rotate-12 group-hover:rotate-0 transition-all duration-300 ease-in-out">
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
-        >
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
           Autodidacta
         </span>
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] px-4 group"
-    >
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] px-4 group">
       <div
-        class="w-full h-fit max-h-[500px] flex flex-col justify-center select-none overflow-hidden"
-      >
+        class="w-full h-fit max-h-[500px] flex flex-col justify-center select-none overflow-hidden">
         <div
-          class="w-full h-max flex flex-col justify-center items-center gap-[4rem] animate-vertical-slide"
-        >
+          class="w-full h-max flex flex-col justify-center items-center gap-[4rem] animate-vertical-slide">
           {
             projects.concat(projects).map((project) => (
               <article class="w-full max-w-sm flex flex-col gap-2 items-center justify-center size-20 border border-dark-border bg-background rounded-[1rem] px-4 py-2">
@@ -158,8 +155,7 @@ import Image from "astro/components/Image.astro";
                   href={project.src}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-full text-left text-blue-800 text-xs"
-                >
+                  class="w-full text-left text-blue-800 text-xs">
                   Ir al proyecto
                 </a>
               </article>
@@ -169,76 +165,68 @@ import Image from "astro/components/Image.astro";
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
-    >
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3">
       <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
         <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
-        >
+          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
           SafePlace
         </h3>
         <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
-        >
+          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance">
           Plataforma para descubrir y explorar las zonas más seguras de tu
           ciudad con información confiable y mapas interactivos.
         </p>
       </div>
       <div class="aspect-video">
         <Image
-          src="/assets/SafePlace.png"
+          src="/assets/SafePlace2.png"
           alt="SafePlace WebSite"
           loading="lazy"
           width={1920}
           height={1080}
+          draggable="false"
           class="object-contain w-full h-full rounded-md"
         />
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
-    >
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3">
       <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
         <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
-        >
+          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
           TeecBack
         </h3>
         <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
-        >
-          Es una plataforma web para recopilar retroalimentación de egresados
+          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance">
+          Plataforma web para recopilar retroalimentación de egresados
           universitarios, que ayuda a mejorar la experiencia educativa.
         </p>
       </div>
       <div class="aspect-video">
         <Image
-          src="/assets/TeecBackv2.png"
+          src="/assets/TeecBack3.png"
           alt="TeecBack"
           loading="lazy"
           width={1920}
           height={1080}
           class="object-contain w-full h-full rounded-md"
+          draggable="false"
         />
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem]"
-    >
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem]">
       <div
-        class="w-full h-full flex flex-col gap-5 justify-center items-center"
-      >
+        class="w-full h-full flex flex-col gap-5 justify-center items-center">
         <h1
-          class="sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
-        >
+          class="sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
           Trabajemos juntos
         </h1>
         <a
           href="https://www.linkedin.com/in/emiliano-salgado-mtz/"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-fit flex gap-2 justify-center items-center px-4 py-2 sm:text-lg font-medium text-background bg-primary rounded-full"
-        >
+          class="w-fit flex gap-2 justify-center items-center px-4 py-2 sm:text-lg font-medium text-background bg-primary rounded-full">
           LinkedIn
           <svg
             width="256"
@@ -256,8 +244,7 @@ import Image from "astro/components/Image.astro";
     </article>
   </div>
   <div
-    class="bg-white opacity-10 absolute size-80 top-[-160px] border blur-[150px] rounded-full"
-  >
+    class="bg-white opacity-10 absolute size-80 top-[-160px] border blur-[150px] rounded-full">
   </div>
 </section>
 
