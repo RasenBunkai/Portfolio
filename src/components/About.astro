@@ -1,47 +1,52 @@
 ---
-import Image from "astro/components/Image.astro"
+import Image from "astro/components/Image.astro";
 ---
-<section id="About"
-  class="relative w-full max-w-screen-2xl text-center flex justify-center items-center px-4 py-20 sm:py-24"
->
+
+<section
+  id="About"
+  class="relative w-full max-w-screen-2xl text-center flex justify-center items-center px-4 py-20 sm:py-24">
   <div
-    class="flex flex-col md:flex-row gap-10 w-full max-w-2xl justify-center items-center"
-  >
+    class="flex flex-col md:flex-row gap-10 w-full max-w-2xl justify-center items-center">
     <div
-      class="border h-[300px] w-[200px] bg-accent rotate-6 p-4 perfect-shadow"
-    >
-      <div class="w-full h-[calc(100%-50px)]  bg-background">
+      class="border h-[300px] w-[200px] bg-accent rotate-6 p-4 perfect-shadow
+           transition-all duration-300 ease-in-out
+           hover:-rotate-3 hover:scale-105">
+      <!-- Añadidas clases de hover y transición -->
+      <div class="w-full h-[calc(100%-50px)] bg-background overflow-hidden">
+        <!-- Añadido overflow-hidden -->
         <Image
-        width={200}
-        height={200}
-        src="/assets/Photo.jpg"
-        alt="Emiliano Salgado Mtz"
-        draggable="false"
+          width={200}
+          height={200}
+          src="/assets/Photo.jpg"
+          alt="Emiliano Salgado Mtz"
+          draggable="false"
+          loading="lazy"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
         />
       </div>
     </div>
     <div class="flex flex-1 flex-col gap-3">
       <h2
-        class="w-full text-left text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-primary via-foreground to-foreground"
-      >
+        class="w-full text-left text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-primary via-foreground to-foreground">
         Más sobre mi
       </h2>
       <p
-        class="w-full max-w-md text-left text-sm sm:text-normal md:text-lg font-normal text-balance"
-      >
-      Soy un Ingeniero en Sistemas de Cancún, México con experiencia en el desarrollo de aplicaciones web. Tengo habilidades en PHP, Laravel, React, Tailwind CSS y lenguaje SQL. Disfruto trabajar en equipo para alcanzar objetivos comunes. Actualmente, estoy ampliando mis habilidades en desarrollo frontend y diseño de interfaces de usuario.
+        class="w-full max-w-md text-left text-sm sm:text-normal md:text-lg font-normal text-balance">
+        Soy un Ingeniero en Sistemas de Cancún, México con experiencia en el
+        desarrollo de aplicaciones web. Tengo habilidades en PHP, Laravel,
+        React, Tailwind CSS y lenguaje SQL. Disfruto trabajar en equipo para
+        alcanzar objetivos comunes. Actualmente, estoy ampliando mis habilidades
+        en desarrollo frontend y diseño de interfaces de usuario.
       </p>
       <div class="flex items-center gap-3">
         <a
-            href="https://wa.me/+529984771502"
+          href="https://wa.me/+529984771502"
           target="_blank"
           rel="noopener noreferrer"
-          class="relative w-fit flex justify-center items-center px-4 py-2 sm:px-6 sm:py-3 sm:text-lg font-medium text-background bg-primary rounded-full perfect-shadow hover:scale-105 duration-300 transition-all"
-        >
+          class="relative w-fit flex justify-center items-center px-4 py-2 sm:px-6 sm:py-3 sm:text-lg font-medium text-background bg-primary rounded-full perfect-shadow hover:scale-105 duration-300 transition-all">
           Contáctame
           <div
-            class="z-[-1] bg-gradient-to-b from-secondary via-primary to-primary absolute w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-full border-t-2 border-secondary"
-          >
+            class="z-[-1] bg-gradient-to-b from-secondary via-primary to-primary absolute w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-full border-t-2 border-secondary">
           </div>
         </a>
       </div>

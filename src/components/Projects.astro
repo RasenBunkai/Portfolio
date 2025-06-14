@@ -11,6 +11,7 @@ const projects = [
       "Plataforma para descubrir y explorar las zonas más seguras de tu ciudad con información confiable y mapas interactivos.",
     src: "https://cancun-safe-place.vercel.app/",
     alt: "Logo",
+    image: "/Branding.png",
   },
   {
     name: "TeecBack",
@@ -18,6 +19,7 @@ const projects = [
       "Plataforma para recopilar retroalimentación de egresados universitarios.",
     src: "https://teecback.vercel.app/",
     alt: "Logo",
+    image: "/Branding.png",
   },
   {
     name: "TecBox",
@@ -25,12 +27,14 @@ const projects = [
       "Aplicación web diseñada para gestionar y organizar proyectos técnicos. Permite a los usuarios crear, editar y eliminar proyectos, así como asignar tareas y hacer seguimiento del progreso.",
     src: "https://github.com/RasenBunkai/TecBox.git",
     alt: "Logo",
+    image: "/Branding.png",
   },
   {
     name: "Hyperton",
     testimonial: "Mi primer proyecto con HTML y CSS vanilla",
     src: "https://github.com/RasenBunkai/Proyecto-Hyperton.git",
     alt: "Logo",
+    image: "/Branding.png",
   },
   {
     name: "Programacion en C++",
@@ -38,6 +42,7 @@ const projects = [
       "En este repositorio almaceno la información adquirida en el lenguaje de programación C++.",
     src: "https://github.com/RasenBunkai/Programacion-en-Cpp.git",
     alt: "Logo",
+    image: "/Branding.png",
   },
   {
     name: "Demo-Landing-Streamer",
@@ -45,6 +50,7 @@ const projects = [
       "Página web diseñada para centralizar la presencia online de streamers. Incluye enlaces a redes sociales y plataformas de stream, calendario de transmisiones, clips destacados, opciones de donación y sección de contacto, todo en un diseño responsivo y personalizado.",
     src: "https://demo-landing-streamer.vercel.app/",
     alt: "Logo",
+    image: "/Branding.png",
   },
   {
     name: "Demo-artist-folio",
@@ -52,6 +58,7 @@ const projects = [
       "Diseño y desarrollo de un sitio web responsivo pensado para artistas visuales que desean mostrar su trabajo de forma profesional. Incluye galería de obras, tabla de precios para comisiones, formulario de contacto, y secciones personalizables como blog o proceso de trabajo.",
     src: "https://demo-artist-folio.vercel.app/",
     alt: "Logo",
+    image: "/Branding.png",
   },
 ];
 
@@ -88,15 +95,20 @@ import Image from "astro/components/Image.astro";
         </p>
       </div>
       <div class="aspect-video">
-        <Image
-          src="/assets/ArtistFolio.png"
-          alt="Mockup Project"
-          loading="lazy"
-          width={1920}
-          height={1080}
-          draggable="false"
-          class="object-contain w-full h-full rounded-md"
-        />
+        <a
+          href="https://demo-artist-folio.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <Image
+            src="/assets/ArtistFolio.png"
+            alt="Mockup Project"
+            loading="lazy"
+            width={1920}
+            height={1080}
+            draggable="false"
+            class="object-contain w-full h-full rounded-md hover:scale-105 duration-500 transition-all"
+          />
+        </a>
       </div>
     </article>
     <article
@@ -138,28 +150,28 @@ import Image from "astro/components/Image.astro";
           class="w-full h-max flex flex-col justify-center items-center gap-[4rem] animate-vertical-slide">
           {
             projects.concat(projects).map((project) => (
-              <article class="w-full max-w-sm flex flex-col gap-2 items-center justify-center size-20 border border-dark-border bg-background rounded-[1rem] px-4 py-2">
-                <div class="w-full flex items-center justify-start gap-2">
-                  {/* <Image
-                    src={project.src}
+              <article class="w-full max-w-sm flex flex-col gap-2 items-center justify-center min-h-20 border border-dark-border bg-background rounded-[1rem] px-4 py-2">
+                <div class="w-full flex items-start gap-2">
+                  <Image
+                    src={project.image}
                     alt={project.alt}
                     width={32}
                     height={32}
                     loading="lazy"
-                    class="object-contain w-8 h-8 rounded-full bg-secondary"
-                  /> */}
-                  <span class="w-7 h-7 rounded-full bg-gradient-to-r from-primary to-secondary" />
-                  <h1 class="text-sm font-medium">{project.name}</h1>
+                    class="object-contain w-8 h-8 rounded-full bg-gradient-to-r from-primary to-secondary"
+                  />
+                  <div class="flex-1 min-w-0 text-left">
+                    <h3 class="text-sm font-medium truncate">{project.name}</h3>
+                    <p class="w-full text-muted-foreground text-xs line-clamp-2">
+                      {project.testimonial}
+                    </p>
+                  </div>
                 </div>
-                {/* <p class="w-full text-left text-muted-foreground text-xs">
-                  {project.project}
-                </p> */}
-
                 <a
                   href={project.src}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-full text-left text-blue-800 text-xs">
+                  class="self-start ml-9 text-blue-800 hover:text-blue-950 text-xs hover:underline hover:translate-x-2 transition duration-300">
                   Ir al proyecto
                 </a>
               </article>
@@ -186,15 +198,20 @@ import Image from "astro/components/Image.astro";
         </p>
       </div>
       <div class="aspect-video">
-        <Image
-          src="/assets/SafePlace2.png"
-          alt="SafePlace WebSite"
-          loading="lazy"
-          width={1920}
-          height={1080}
-          draggable="false"
-          class="object-contain w-full h-full rounded-md"
-        />
+        <a
+          href="https://cancun-safe-place.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><Image
+            src="/assets/SafePlace2.png"
+            alt="SafePlace WebSite"
+            loading="lazy"
+            width={1920}
+            height={1080}
+            draggable="false"
+            class="object-contain w-full h-full rounded-md hover:scale-105 duration-500 transition-all"
+          /></a
+        >
       </div>
     </article>
     <article
@@ -215,15 +232,20 @@ import Image from "astro/components/Image.astro";
         </p>
       </div>
       <div class="aspect-video">
-        <Image
-          src="/assets/TeecBack3.png"
-          alt="TeecBack"
-          loading="lazy"
-          width={1920}
-          height={1080}
-          class="object-contain w-full h-full rounded-md"
-          draggable="false"
-        />
+        <a
+          href="https://teecback.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><Image
+            src="/assets/TeecBack3.png"
+            alt="TeecBack"
+            loading="lazy"
+            width={1920}
+            height={1080}
+            class="object-contain w-full h-full rounded-md hover:scale-105 duration-500 transition-all"
+            draggable="false"
+          /></a
+        >
       </div>
     </article>
     <article
