@@ -1,6 +1,7 @@
 export const languajeList = {
   es: "Español",
   en: "English",
+  ja: "日本語",
 };
 export const showDefaultLang = false;
 export const defaultLang = "es";
@@ -59,5 +60,35 @@ export const ui = {
       "I am a Systems Engineer from Cancun, Mexico with experience in web application development and SQL language. I have skills in PHP, Laravel, Bootstrap, Tailwind CSS and database management. I enjoy working in collaborative teams to achieve common goals. Currently, I am expanding my skills in frontend development and user interface design.",
     "aboutme.calltoaction": "Contact me",
     "footer.title": "Salgado Martínez Emiliano, Systems Engineer.",
+  },
+  ja: {
+    "header.stack": "技術スタック",
+    "header.projects": "プロジェクト",
+    "header.about": "プロフィール",
+    "hero.name": "エミリアーノ・サルガド・マルティネス",
+    "hero.title": "フロントエンド開発者 & UX/UIデザイナー",
+    "hero.download": "履歴書をダウンロード",
+    "stack.title": "プロジェクトで使用する技術",
+    "projects.title": "プロジェクト",
+    "projects.subtitle": "常に学び、常に向上しています。",
+    "projects.portfolio.title": "ポートフォリオとコミッション",
+    "projects.portfolio.desc":
+      "プロフェッショナルに作品を展示したいビジュアルアーティストのためのレスポンシブWebサイトの設計と開発。",
+    "projects.skills.collab": "協力",
+    "projects.skills.adapt": "適応力",
+    "projects.skills.team": "チームワーク",
+    "projects.skills.self": "独学",
+    "projects.safeplace.title": "SafePlace",
+    "projects.safeplace.desc":
+      "信頼できる情報とインタラクティブマップで都市の最も安全なエリアを発見・探索するプラットフォーム。",
+    "projects.teecback.title": "TeecBack",
+    "projects.teecback.desc":
+      "大学卒業生からのフィードバックを収集し、教育体験の向上を支援するWebプラットフォーム。",
+    "projects.cta": "一緒に働きましょう",
+    "about.title": "自己紹介",
+    "about.description":
+      "メキシコ・カンクン出身のシステムエンジニアで、Webアプリケーション開発の経験があります。PHP、Laravel、React、Tailwind CSS、SQLのスキルを持っています。共通の目標を達成するためにチームで働くことを楽しんでいます。現在、フロントエンド開発とUIデザインのスキルを拡大しています。",
+    "about.contact": "お問い合わせ",
+    "footer.text": "サルガド・マルティネス・エミリアーノ、システムエンジニア。",
   },
 } as const;
