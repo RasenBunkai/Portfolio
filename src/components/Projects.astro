@@ -4,101 +4,51 @@
   Link: https://shots.so/
 */
 
-const projects = [
-  {
-    name: "SafePlace",
-    testimonial:
-      "Plataforma para descubrir y explorar las zonas más seguras de tu ciudad con información confiable y mapas interactivos.",
-    src: "https://cancun-safe-place.vercel.app/",
-    alt: "Logo",
-    image: "/Branding.png",
-  },
-  {
-    name: "TeecBack",
-    testimonial:
-      "Plataforma para recopilar retroalimentación de egresados universitarios.",
-    src: "https://teecback.vercel.app/",
-    alt: "Logo",
-    image: "/Branding.png",
-  },
-  {
-    name: "TecBox",
-    testimonial:
-      "Aplicación web diseñada para gestionar y organizar proyectos técnicos. Permite a los usuarios crear, editar y eliminar proyectos, así como asignar tareas y hacer seguimiento del progreso.",
-    src: "https://github.com/RasenBunkai/TecBox.git",
-    alt: "Logo",
-    image: "/Branding.png",
-  },
-  {
-    name: "Hyperton",
-    testimonial: "Mi primer proyecto con HTML y CSS vanilla",
-    src: "https://github.com/RasenBunkai/Proyecto-Hyperton.git",
-    alt: "Logo",
-    image: "/Branding.png",
-  },
-  {
-    name: "Programacion en C++",
-    testimonial:
-      "En este repositorio almaceno la información adquirida en el lenguaje de programación C++.",
-    src: "https://github.com/RasenBunkai/Programacion-en-Cpp.git",
-    alt: "Logo",
-    image: "/Branding.png",
-  },
-  {
-    name: "Demo-Landing-Streamer",
-    testimonial:
-      "Página web diseñada para centralizar la presencia online de streamers. Incluye enlaces a redes sociales y plataformas de stream, calendario de transmisiones, clips destacados, opciones de donación y sección de contacto, todo en un diseño responsivo y personalizado.",
-    src: "https://demo-landing-streamer.vercel.app/",
-    alt: "Logo",
-    image: "/Branding.png",
-  },
-  {
-    name: "Demo-artist-folio",
-    testimonial:
-      "Diseño y desarrollo de un sitio web responsivo pensado para artistas visuales que desean mostrar su trabajo de forma profesional. Incluye galería de obras, tabla de precios para comisiones, formulario de contacto, y secciones personalizables como blog o proceso de trabajo.",
-    src: "https://demo-artist-folio.vercel.app/",
-    alt: "Logo",
-    image: "/Branding.png",
-  },
-];
-
 import Image from "astro/components/Image.astro";
+const { t } = Astro.props as { t: (key: string) => string };
+import { projects } from "@/data/projects";
 ---
 
 <section
   id="Projects"
-  class="relative overflow-hidden bg-foreground w-full text-center flex flex-col justify-center items-center gap-10 px-4 py-24 sm:py-24 select-none">
+  class="relative overflow-hidden bg-foreground w-full text-center flex flex-col justify-center items-center gap-10 px-4 py-24 sm:py-24 select-none"
+>
   <h2
-    class="z-10 w-full max-w-xl sm:text-center text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground">
-    Mis proyectos
+    class="z-10 w-full max-w-xl sm:text-center text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground"
+  >
+    {t("projects.title")}
   </h2>
   <p
-    class="w-full max-w-xl bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground sm:text-center text-normal sm:text-lg md:text-xl font-light tracking-tighter text-balance">
-    Siempre aprendiendo, siempre mejorando.
+    class="w-full max-w-xl bg-clip-text text-transparent bg-gradient-to-b from-background via-background to-muted-foreground sm:text-center text-normal sm:text-lg md:text-xl font-light tracking-tighter text-balance"
+  >
+    {t("projects.subtitle")}
   </p>
   <div class="z-10 w-full grid grid-cols-1 md:grid-cols-5 grid-rows-6 gap-2">
     <article
-      class="overflow-hidden relative bg-dark-card col-span-1 md:col-span-3 md:row-span-2 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3">
+      class="overflow-hidden relative bg-dark-card col-span-1 md:col-span-3 md:row-span-2 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+    >
       <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
         <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
+          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
+        >
           <a
             href="https://demo-artist-folio.vercel.app/"
             target="_blank"
-            rel="noopener noreferrer">Portafolio personal y comisiones</a
+            rel="noopener noreferrer">{t("proyect1.title")}</a
           >
         </h3>
         <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance">
-          Diseño y desarrollo de un sitio web responsivo pensado para artistas
-          visuales que desean mostrar su trabajo de forma profesional.
+          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
+        >
+          {t("proyect1.description")}
         </p>
       </div>
       <div class="aspect-video">
         <a
           href="https://demo-artist-folio.vercel.app/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <Image
             src="/assets/ArtistFolio.png"
             alt="Mockup Project"
@@ -112,67 +62,81 @@ import Image from "astro/components/Image.astro";
       </div>
     </article>
     <article
-      class="overflow-hidden group bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 h-[300px] border border-dark-border rounded-[1rem] p-4 flex flex-col flex-1 gap-2 justify-center items-center">
+      class="overflow-hidden group bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 h-[300px] border border-dark-border rounded-[1rem] p-4 flex flex-col flex-1 gap-2 justify-center items-center"
+    >
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center rotate-12 group-hover:rotate-0 border transition-all duration-300 ease-in-out">
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center rotate-12 group-hover:rotate-0 border transition-all duration-300 ease-in-out"
+      >
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
-          colaboración
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
+        >
+          {t("softskills1")}
         </span>
       </div>
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center -rotate-6 group-hover:rotate-0 border transition-all duration-300 ease-in-out">
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center -rotate-6 group-hover:rotate-0 border transition-all duration-300 ease-in-out"
+      >
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
-          adaptabilidad
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
+        >
+          {t("softskills2")}
         </span>
       </div>
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border">
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border"
+      >
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
-          Trabajo en equipo
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
+        >
+          {t("softskills3")}
         </span>
       </div>
       <div
-        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border rotate-12 group-hover:rotate-0 transition-all duration-300 ease-in-out">
+        class="w-fit rounded-full bg-background px-4 py-2 flex justify-center items-center border rotate-12 group-hover:rotate-0 transition-all duration-300 ease-in-out"
+      >
         <span
-          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter">
-          Autodidacta
+          class="text-normal sm:text-lg md:text-xl font-light tracking-tighter"
+        >
+          {t("softskills4")}
         </span>
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] px-4 group">
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] px-4 group"
+    >
       <div
-        class="w-full h-fit max-h-[500px] flex flex-col justify-center select-none overflow-hidden">
+        class="w-full h-fit max-h-[500px] flex flex-col justify-center select-none overflow-hidden"
+      >
         <div
-          class="w-full h-max flex flex-col justify-center items-center gap-[4rem] animate-vertical-slide">
+          class="w-full h-max flex flex-col justify-center items-center gap-[4rem] animate-vertical-slide"
+        >
           {
-            projects.concat(projects).map((project) => (
+            projects.map((p) => (
               <article class="w-full max-w-sm flex flex-col gap-2 items-center justify-center min-h-20 border border-dark-border bg-background rounded-[1rem] px-4 py-2">
                 <div class="w-full flex items-start gap-2">
                   <Image
-                    src={project.image}
-                    alt={project.alt}
+                    src={p.image}
+                    alt={p.alt}
                     width={32}
                     height={32}
                     loading="lazy"
                     class="object-contain w-8 h-8 rounded-full bg-gradient-to-r from-primary to-secondary"
                   />
                   <div class="flex-1 min-w-0 text-left">
-                    <h3 class="text-sm font-medium truncate">{project.name}</h3>
+                    <h3 class="text-sm font-medium truncate">{p.name}</h3>
                     <p class="w-full text-muted-foreground text-xs line-clamp-2">
-                      {project.testimonial}
+                      {t?.(`projects.${p.id}.testimonial`) ??
+                        `MISSING t / id=${p.id}`}
                     </p>
                   </div>
                 </div>
                 <a
-                  href={project.src}
+                  href={p.src}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="self-start ml-9 text-blue-800 hover:text-blue-950 text-xs hover:underline hover:translate-x-2 transition duration-300">
-                  Ir al proyecto
+                  class="self-start ml-9 text-blue-800 hover:text-blue-950 text-xs hover:underline hover:translate-x-2 transition duration-300"
+                >
+                  {t("project.list")}
                 </a>
               </article>
             ))
@@ -181,20 +145,22 @@ import Image from "astro/components/Image.astro";
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3">
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+    >
       <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
         <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
+          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
+        >
           <a
             href="https://cancun-safe-place.vercel.app/"
             target="_blank"
-            rel="noopener noreferrer">SafePlace</a
+            rel="noopener noreferrer">{t("proyect2.title")}</a
           >
         </h3>
         <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance">
-          Plataforma para descubrir y explorar las zonas más seguras de tu
-          ciudad con información confiable y mapas interactivos.
+          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
+        >
+          {t("proyect2.description")}
         </p>
       </div>
       <div class="aspect-video">
@@ -215,20 +181,22 @@ import Image from "astro/components/Image.astro";
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3">
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+    >
       <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
         <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
+          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
+        >
           <a
             href="https://teecback.vercel.app/"
             target="_blank"
-            rel="noopener noreferrer">TeecBack</a
+            rel="noopener noreferrer">{t("proyect3.title")}</a
           >
         </h3>
         <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance">
-          Plataforma web para recopilar retroalimentación de egresados
-          universitarios, que ayuda a mejorar la experiencia educativa.
+          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
+        >
+          {t("proyect3.description")}
         </p>
       </div>
       <div class="aspect-video">
@@ -249,18 +217,22 @@ import Image from "astro/components/Image.astro";
       </div>
     </article>
     <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem]">
+      class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem]"
+    >
       <div
-        class="w-full h-full flex flex-col gap-5 justify-center items-center">
+        class="w-full h-full flex flex-col gap-5 justify-center items-center"
+      >
         <h1
-          class="sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary">
-          Trabajemos juntos
+          class="sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
+        >
+          {t("calltoaction.title")}
         </h1>
         <a
           href="https://x.com/Rasen_bunkai"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-fit flex gap-2 justify-center items-center px-4 py-2 sm:text-lg font-medium text-background bg-primary rounded-full hover:scale-105 duration-300 transition-all">
+          class="w-fit flex gap-2 justify-center items-center px-4 py-2 sm:text-lg font-medium text-background bg-primary rounded-full hover:scale-105 duration-300 transition-all"
+        >
           Twitter
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +251,8 @@ import Image from "astro/components/Image.astro";
     </article>
   </div>
   <div
-    class="bg-white opacity-10 absolute size-80 top-[-160px] border blur-[150px] rounded-full">
+    class="bg-white opacity-10 absolute size-80 top-[-160px] border blur-[150px] rounded-full"
+  >
   </div>
 </section>
 

@@ -1,22 +1,111 @@
 ---
 import { languajeList } from "@/i18n/ui";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const { currentLang } = Astro.props;
+
+// conserva el hash (#Stack, etc.) si lo tienes en la URL
+const hash = Astro.url.hash ?? "";
+
+// para mostrar el label actual
+const currentLabel =
+  languajeList[currentLang as keyof typeof languajeList] ?? "Lang";
 ---
 
-<div class="flex gap-2">
-  {
-    Object.entries(languajeList).map(([lang, label]) => (
-      <a
-        href={lang === "es" ? "/" : `/${lang}`}
-        class={`px-3 py-1 rounded-lg transition ${
-          currentLang === lang
-            ? "bg-primary text-white"
-            : "bg-gray-200 hover:bg-gray-300"
-        }`}
+<div class="text-white relative ml-auto" id="lang-dropdown">
+  <details class="group relative">
+    <summary
+      class="list-none cursor-pointer select-none inline-flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-card/90 hover:text-card hover:bg-white/10 transition"
+      aria-label="Cambiar idioma"
+      title="Cambiar idioma"
+    >
+      <!-- Icono estilo Google Translate (globo + 文/A) -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
       >
-        {label}
-      </a>
-    ))
-  }
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
+        ></path>
+      </svg>
+
+      <span class="hidden sm:inline">{currentLabel}</span>
+
+      <!-- chevron -->
+      <svg
+        class="size-4 opacity-80 transition group-open:rotate-180"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </summary>
+
+    <!-- Menu -->
+    <div
+      class="bg-foreground absolute right-0 mt-2 w-44 overflow-hidden rounded-xl border border-white/15 backdrop-blur shadow-lg"
+    >
+      <div class="py-1">
+        {
+          Object.entries(languajeList).map(([lang, label]) => {
+            const href = getRelativeLocaleUrl(lang, "") + hash;
+            const isActive = currentLang === lang;
+
+            return (
+              <a
+                href={href}
+                class={`flex items-center justify-between px-3 py-2 text-sm transition
+                ${isActive ? "bg-white/10 text-white" : "text-card/90 hover:bg-white/10 hover:text-white"}`}
+              >
+                <span>{label}</span>
+                {isActive ? (
+                  <svg
+                    class="size-4 opacity-90"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.07 7.1a1 1 0 0 1-1.415.003L3.29 8.85a1 1 0 1 1 1.42-1.4l3.22 3.27 6.36-6.39a1 1 0 0 1 1.414-.04Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                ) : null}
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </details>
 </div>
+
+<!-- UX: cerrar al hacer click fuera (opcional, pero recomendado) -->
+<script is:inline>
+  (() => {
+    const root = document.getElementById("lang-dropdown");
+    if (!root) return;
+    const details = root.querySelector("details");
+    if (!details) return;
+
+    document.addEventListener("click", (e) => {
+      if (!details.open) return;
+      if (!root.contains(e.target)) details.open = false;
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && details.open) details.open = false;
+    });
+  })();
+</script>

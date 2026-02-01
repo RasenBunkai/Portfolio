@@ -7,27 +7,34 @@ import Projects from "@/components/Projects.astro";
 import About from "@/components/About.astro";
 import Footer from "@/components/Footer.astro";
 
+import { useTranslations } from "@/i18n/utils";
+
+const lang = "es" as const;
+const t = useTranslations(lang);
 ---
-<Layout title="Free Astro Portfolio - LiteFolio">
+
+<Layout title="Emiliano Salgado Martínez | Portfolio" lang={lang}>
   <main
-    class="relative w-full flex flex-col justify-start items-center pattern">
-    <Header />
-    <Hero />
-    <Stack />
-    <Projects />
-    <About />
-    <Footer />
+    class="relative w-full flex flex-col justify-start items-center pattern"
+  >
+    <Header currentLang={lang} t={t} />
+    <Hero t={t} />
+    <Stack t={t} />
+    <Projects t={t} />
+    <About t={t} />
+    <Footer t={t} />
   </main>
 </Layout>
 
 <style>
   .pattern {
     background-color: #f2f5f7;
-    background-image: radial-gradient(circle at top center, #f5fdff 70px, white),
+    background-image:
+      radial-gradient(circle at top center, #f5fdff 70px, white),
       repeating-radial-gradient(
         circle at top center,
-        #ffffff,+
         #ffffff,
+        + #ffffff,
         200px,
         transparent 0,
         #eaeaea 201px

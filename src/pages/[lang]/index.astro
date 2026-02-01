@@ -1,0 +1,50 @@
+---
+import Header from "@/components/Header.astro";
+import Hero from "@/components/Hero.astro";
+import Layout from "@/layouts/Layout.astro";
+import Stack from "@/components/Stack.astro";
+import Projects from "@/components/Projects.astro";
+import About from "@/components/About.astro";
+import Footer from "@/components/Footer.astro";
+
+import { useTranslations } from "@/i18n/utils";
+
+export const prerender = true;
+
+// Genera /en y /ja. (es queda en / gracias a prefixDefaultLocale:false)
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "ja" } }];
+}
+
+const lang = Astro.params.lang as "en" | "ja";
+const t = useTranslations(lang);
+---
+
+<Layout title="Emiliano Salgado Martínez | Portfolio" lang={lang}>
+  <main
+    class="relative w-full flex flex-col justify-start items-center pattern"
+  >
+    <Header currentLang={lang} t={t} />
+    <Hero t={t} />
+    <Stack t={t} />
+    <Projects t={t} />
+    <About t={t} />
+    <Footer t={t} />
+  </main>
+</Layout>
+
+<style>
+  .pattern {
+    background-color: #f2f5f7;
+    background-image:
+      radial-gradient(circle at top center, #f5fdff 70px, white),
+      repeating-radial-gradient(
+        circle at top center,
+        #ffffff,
+        #ffffff 200px,
+        transparent 0,
+        #eaeaea 201px
+      );
+    background-blend-mode: multiply;
+  }
+</style>

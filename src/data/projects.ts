@@ -1,0 +1,52 @@
+// src/data/projects.ts
+export const projects = [
+  {
+    id: "1",
+    name: "SafePlace",
+    src: "https://cancun-safe-place.vercel.app/",
+    alt: "Logo",
+    image: "/Branding.png",
+  },
+  {
+    id: "2",
+    name: "TeecBack",
+    src: "https://teecback.vercel.app/",
+    alt: "Logo",
+    image: "/Branding.png",
+  },
+  {
+    id: "3",
+    name: "TecBox",
+    src: "https://github.com/RasenBunkai/TecBox.git",
+    alt: "Logo",
+    image: "/Branding.png",
+  },
+  {
+    id: "4",
+    name: "Hyperton",
+    src: "https://github.com/RasenBunkai/Proyecto-Hyperton.git",
+    alt: "Logo",
+    image: "/Branding.png",
+  },
+  {
+    id: "5",
+    name: "Programacion en C++",
+    src: "https://github.com/RasenBunkai/Programacion-en-Cpp.git",
+    alt: "Logo",
+    image: "/Branding.png",
+  },
+  {
+    id: "6",
+    name: "Demo-Landing-Streamer",
+    src: "https://demo-landing-streamer.vercel.app/",
+    alt: "Logo",
+    image: "/Branding.png",
+  },
+  {
+    id: "7",
+    name: "Demo-artist-folio",
+    src: "https://demo-artist-folio.vercel.app/",
+    alt: "Logo",
+    image: "/Branding.png",
+  },
+] as const;

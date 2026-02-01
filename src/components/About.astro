@@ -1,5 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
+const { t } = Astro.props;
 ---
 
 <section
@@ -32,16 +33,12 @@ import Image from "astro/components/Image.astro";
       <h2
         class="w-full text-left text-lg sm:text-2xl md:text-4xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-primary via-foreground to-foreground"
       >
-        Más sobre mi
+        {t("aboutme.title")}
       </h2>
       <p
         class="w-full max-w-md text-left text-sm sm:text-normal md:text-lg font-normal text-balance"
       >
-        Soy un Ingeniero en Sistemas de Cancún, México con experiencia en el
-        desarrollo de aplicaciones web. Tengo habilidades en PHP, Laravel,
-        React, Tailwind CSS y lenguaje SQL. Disfruto trabajar en equipo para
-        alcanzar objetivos comunes. Actualmente, estoy ampliando mis habilidades
-        en desarrollo frontend y diseño de interfaces de usuario.
+        {t("aboutme.description")}
       </p>
       <div class="flex items-center gap-3">
         <a
@@ -50,7 +47,7 @@ import Image from "astro/components/Image.astro";
           rel="noopener noreferrer"
           class="relative w-fit flex justify-center items-center px-4 py-2 sm:px-6 sm:py-3 sm:text-lg font-medium text-background bg-primary rounded-full perfect-shadow hover:scale-105 duration-300 transition-all"
         >
-          Contáctame
+          {t("aboutme.calltoaction")}
           <div
             class="z-[-1] bg-gradient-to-b from-secondary via-primary to-primary absolute w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-full border-t-2 border-secondary"
           >
