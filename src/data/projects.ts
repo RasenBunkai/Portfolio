@@ -1,4 +1,3 @@
-// src/data/projects.ts
 export const projects = [
   {
     id: "1",

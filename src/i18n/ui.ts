@@ -8,9 +8,9 @@ export const defaultLang = "es";
 
 export const ui = {
   es: {
-    "header.stack": "Mis tecnologías",
-    "header.projects": "Mis proyectos",
-    "header.about": "Sobre mi",
+    "header.stack": "Stack",
+    "header.projects": "Proyectos",
+    "header.about": "Pefil",
     "hero.title": "Desarrollador Frontend y Diseñador UX/UI",
     "hero.download": "Descarga mi CV",
     "stack.title": "Las tecnologías que utilizo en mis proyectos",
@@ -51,9 +51,9 @@ export const ui = {
     "footer.title": "Salgado Martínez Emiliano, Ingeniero en Sistemas.",
   },
   en: {
-    "header.stack": "My technologies",
-    "header.projects": "My projects",
-    "header.about": "About me",
+    "header.stack": "Stack",
+    "header.projects": "Projects",
+    "header.about": "About",
     "hero.title": "Frontend Developer and UX/UI Designer",
     "hero.download": "Download my CV",
     "stack.title": "The technologies I use in my projects",
@@ -94,9 +94,9 @@ export const ui = {
     "footer.title": "Salgado Martínez Emiliano, Systems Engineer.",
   },
   ja: {
-    "header.stack": "使用している技術",
-    "header.projects": "プロジェクト",
-    "header.about": "私について",
+    "header.stack": "技術",
+    "header.projects": "制作",
+    "header.about": "概要",
     "hero.title": "フロントエンド開発者・UX/UIデザイナー",
     "hero.download": "履歴書をダウンロード",
     "stack.title": "プロジェクトで使用している技術",
