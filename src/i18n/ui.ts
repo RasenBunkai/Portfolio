@@ -67,9 +67,9 @@ export const ui = {
     softskills3: "Teamwork",
     softskills4: "Self-taught",
     "project.list": "Go to project",
-    "proyect2.title": "SafePlace",
+    "proyect2.title": "tip calculator",
     "proyect2.description":
-      "A platform to discover and explore the safest areas of your city with reliable information and interactive maps.",
+      "Web application designed to calculate tips quickly.",
     "proyect3.title": "TeecBack",
     "proyect3.description":
       "A web platform to collect feedback from university graduates, helping improve the educational experience.",
@@ -110,9 +110,9 @@ export const ui = {
     softskills3: "チームワーク",
     softskills4: "独学",
     "project.list": "プロジェクトを見る",
-    "proyect2.title": "SafePlace",
+    "proyect2.title": "チップ計算機",
     "proyect2.description":
-      "信頼できる情報とインタラクティブな地図を使って、都市で最も安全なエリアを探索・発見できるプラットフォーム。",
+      "チップの金額を素早く計算するために作られたWebアプリです。",
     "proyect3.title": "TeecBack",
     "proyect3.description":
       "大学卒業生からのフィードバックを収集し、教育体験の向上を支援するWebプラットフォーム。",

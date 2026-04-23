@@ -24,31 +24,30 @@ import { projects } from "@/data/projects";
     {t("projects.subtitle")}
   </p>
   <div class="z-10 w-full grid grid-cols-1 md:grid-cols-5 grid-rows-6 gap-2">
-    <article
-      class="overflow-hidden relative bg-dark-card col-span-1 md:col-span-3 md:row-span-2 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+    <a
+      href="https://demo-artist-folio.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block col-span-1 md:col-span-3 md:row-span-2"
     >
-      <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
-        <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
-        >
-          <a
-            href="https://demo-artist-folio.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer">{t("proyect1.title")}</a
+      <article
+        class="overflow-hidden relative bg-dark-card border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+      >
+        <div class="flex flex-col gap-2 w-full items-start p-4 text-left">
+          <h3
+            class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
           >
-        </h3>
-        <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
-        >
-          {t("proyect1.description")}
-        </p>
-      </div>
-      <div class="aspect-video">
-        <a
-          href="https://demo-artist-folio.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+            {t("proyect1.title")}
+          </h3>
+
+          <p
+            class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
+          >
+            {t("proyect1.description")}
+          </p>
+        </div>
+
+        <div class="aspect-video">
           <Image
             src="/assets/ArtistFolio.png"
             alt="Mockup Project"
@@ -58,9 +57,9 @@ import { projects } from "@/data/projects";
             draggable="false"
             class="object-contain w-full h-full rounded-md hover:scale-105 duration-500 transition-all"
           />
-        </a>
-      </div>
-    </article>
+        </div>
+      </article>
+    </a>
     <article
       class="overflow-hidden group bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 h-[300px] border border-dark-border rounded-[1rem] p-4 flex flex-col flex-1 gap-2 justify-center items-center"
     >
@@ -144,31 +143,31 @@ import { projects } from "@/data/projects";
         </div>
       </div>
     </article>
-    <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-3 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+    <a
+      href="https://custom-tips.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block col-span-1 md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-3"
     >
-      <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
-        <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
-        >
-          <a
-            href="https://custom-tips.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer">{t("proyect2.title")}</a
+      <article
+        class="overflow-hidden bg-dark-card border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+      >
+        <div class="flex flex-col gap-2 w-full items-start p-4 text-left">
+          <h3
+            class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
           >
-        </h3>
-        <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
-        >
-          {t("proyect2.description")}
-        </p>
-      </div>
-      <div class="aspect-video">
-        <a
-          href="https://custom-tips.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><Image
+            {t("proyect2.title")}
+          </h3>
+
+          <p
+            class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
+          >
+            {t("proyect2.description")}
+          </p>
+        </div>
+
+        <div class="aspect-video">
+          <Image
             src="/assets/calculadora-de-propina.png"
             alt="SafePlace WebSite"
             loading="lazy"
@@ -176,35 +175,35 @@ import { projects } from "@/data/projects";
             height={1080}
             draggable="false"
             class="object-contain w-full h-full rounded-md hover:scale-105 duration-500 transition-all"
-          /></a
-        >
-      </div>
-    </article>
-    <article
-      class="overflow-hidden bg-dark-card col-span-1 md:col-span-3 md:row-span-2 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+          />
+        </div>
+      </article>
+    </a>
+    <a
+      href="https://teecback.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block col-span-1 md:col-span-3 md:row-span-2 md:row-start-5"
     >
-      <div class="flex flex-col gap-2 w-full items-start p-4 tetx-left">
-        <h3
-          class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
-        >
-          <a
-            href="https://teecback.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer">{t("proyect3.title")}</a
+      <article
+        class="overflow-hidden bg-dark-card border h-[300px] border-dark-border rounded-[1rem] flex flex-col lg:flex-row lg:gap-3"
+      >
+        <div class="flex flex-col gap-2 w-full items-start p-4 text-left">
+          <h3
+            class="text-left sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
           >
-        </h3>
-        <p
-          class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
-        >
-          {t("proyect3.description")}
-        </p>
-      </div>
-      <div class="aspect-video">
-        <a
-          href="https://teecback.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><Image
+            {t("proyect3.title")}
+          </h3>
+
+          <p
+            class="w-full text-muted-foreground text-left text-sm sm:text-normal md:text-lg font-light tracking-tighter text-balance"
+          >
+            {t("proyect3.description")}
+          </p>
+        </div>
+
+        <div class="aspect-video">
+          <Image
             src="/assets/TeecBack3.png"
             alt="TeecBack"
             loading="lazy"
@@ -212,21 +211,21 @@ import { projects } from "@/data/projects";
             height={1080}
             class="object-contain w-full h-full rounded-md hover:scale-105 duration-500 transition-all"
             draggable="false"
-          /></a
-        >
-      </div>
-    </article>
+          />
+        </div>
+      </article>
+    </a>
     <article
       class="overflow-hidden bg-dark-card col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-5 border h-[300px] border-dark-border rounded-[1rem]"
     >
       <div
         class="w-full h-full flex flex-col gap-5 justify-center items-center"
       >
-        <h1
+        <h3
           class="sm:text-xl md:text-2xl font-medium tracking-tighter text-pretty bg-clip-text text-transparent bg-gradient-to-br from-background via-background to-secondary"
         >
           {t("calltoaction.title")}
-        </h1>
+        </h3>
         <a
           href="https://x.com/Rasen_bunkai"
           target="_blank"
