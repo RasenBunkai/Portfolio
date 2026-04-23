@@ -24,9 +24,9 @@ export const ui = {
     softskills3: "Trabajo en equipo",
     softskills4: "Autodidacta",
     "project.list": "Ir al proyecto",
-    "proyect2.title": "SafePlace",
+    "proyect2.title": "Calculadora de propinas",
     "proyect2.description":
-      "Plataforma para descubrir y explorar las zonas más seguras de tu ciudad con información confiable y mapas interactivos.",
+      "Aplicación web diseñada para calcular propinas de manera rápida.",
     "proyect3.title": "TeecBack",
     "proyect3.description":
       "Es una plataforma web para recopilar retroalimentación de egresados universitarios, que ayuda a mejorar la experiencia educativa.",
