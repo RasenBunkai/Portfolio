@@ -29,22 +29,13 @@ const t = useTranslations(lang);
     <Stack t={t} />
     <Projects t={t} />
     <About t={t} />
-    <Footer t={t} />
+    <Footer t={t} lang={lang} />
   </main>
 </Layout>
 
 <style>
   .pattern {
-    background-color: #f2f5f7;
-    background-image:
-      radial-gradient(circle at top center, #f5fdff 70px, white),
-      repeating-radial-gradient(
-        circle at top center,
-        #ffffff,
-        #ffffff 200px,
-        transparent 0,
-        #eaeaea 201px
-      );
-    background-blend-mode: multiply;
+    background-image: url("/blurry-gradient-haikei.svg");
+    background-size: cover;
   }
 </style>
